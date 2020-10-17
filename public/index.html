@@ -40,6 +40,11 @@
 		 * ============== */
 
 		#status {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -135,7 +140,6 @@
 		HTML5 canvas appears to be unsupported in the current browser.<br />
 		Please try updating or use a different browser.
 	</canvas>
-
 	<div class="outer">
   <div class="middle">
     <div class="inner">
@@ -177,7 +181,6 @@
 			var statusProgressInner = document.getElementById('status-progress-inner');
 			var statusIndeterminate = document.getElementById('status-indeterminate');
 			var statusNotice = document.getElementById('status-notice');
-			var zvlogo = document.getElementById('logogame');
 
 			var initializing = true;
 			var statusMode = 'hidden';
@@ -261,7 +264,6 @@
 					if (current === total) {
 						// wait for progress bar animation
 						setTimeout(() => {
-							zvlogo.style.display = "none"
 							setStatusMode('indeterminate');
 						}, 500);
 					}
